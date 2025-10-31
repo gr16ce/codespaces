@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/youtube.css" media="all" />
+        <link rel="stylesheet" href="/assets/youtube.css?ver=<?php echo date(format:'YmdHis'); ?>media="all" />
     </head>
     <body>
         <!-- Get started here -->
@@ -16,8 +16,8 @@
                    <img id="logo" src="/assets/youtube.svg" />
             </div>
              <div class="header-inner header-center">
-                <form method="POST" id="search">
-                      <input type="submit" value="search" placeholder="search" />
+                <form method="GET" id="search" action="https://www.youtube.com/results">
+                      <input type="submit" value="search_query" placeholder="search" />
                       <input type="submit" value="search" />
                 </form>
                 <button id="voice search">
@@ -25,7 +25,8 @@
                 </button>
              </div>
              <div class="header-inner header-right">
-                <button id="settings">
+                <button id="hamburger">
+                    <?php include dirname(path:_FILE_).'/assets/hamburger.svg' ;?>
                     <img src="/assets/vertical-dots.svg" />
                 </button>
                 <button id="user">
