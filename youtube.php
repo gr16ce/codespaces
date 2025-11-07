@@ -17,7 +17,7 @@
             </div>
              <div class="header-inner header-center">
                 <form method="GET" id="search" action="https://www.youtube.com/results">
-                      <input type="submit" value="search_query" placeholder="search" />
+                      <input type="text" name="search_query" placeholder="search" />
                       <input type="submit" value="search" />
                 </form>
                 <button id="voice search">
