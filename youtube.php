@@ -7,13 +7,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/youtube.css?ver=<?php echo date(format:'YmdHis'); ?>media="all" />
+        <link rel="stylesheet" href="/assets/youtube.css?ver=<?php echo date('YmdHis'); ?>media="all" />
     </head>
     <body>
         <!-- Get started here -->
          <div id="header">
             <div class="header-inner header-left">
-                   <img id="logo" src="/assets/youtube.svg" />
+                   <img id="logo" src="/assets/youtube.svg?ver=<?php echo ('YmdHis'); ?>" />
             </div>
              <div class="header-inner header-center">
                 <form method="GET" id="search" action="https://www.youtube.com/results">
@@ -26,7 +26,7 @@
              </div>
              <div class="header-inner header-right">
                 <button id="hamburger">
-                    <?php include dirname(path:_FILE_).'/assets/hamburger.svg' ;?>
+                    <?php include dirname(__FILE__).'/assets/hamburger.svg' ;?>
                     <img src="/assets/vertical-dots.svg" />
                 </button>
                 <button id="user">
