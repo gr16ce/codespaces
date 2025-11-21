@@ -21,16 +21,15 @@
                       <input type="submit" value="search" />
                 </form>
                 <button id="voice search">
-                    <img src="/assets/microphone.svg" />
+                <?php include dirname(__FILE__) . '/assets/microphone.svg'; ?>
                 </button>
              </div>
              <div class="header-inner header-right">
                 <button id="hamburger">
-                    <?php include dirname(__FILE__).'/assets/hamburger.svg' ;?>
-                    <img src="/assets/vertical-dots.svg" />
+                    <?php include dirname(__FILE__) . '/assets/vertical-dots.svg'; ?>
                 </button>
                 <button id="user">
-                    <img src="/assets/user.svg" />
+                    <?php include dirname(__FILE__) . '/assets/user.svg'; ?>
                     <span>Sign in</span>
                 </button>
              </div>
