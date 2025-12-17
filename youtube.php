@@ -12,7 +12,26 @@
     <body>
         <!-- Get started here -->
          <div id="header">
-            <div class="header-inner header-left">
+         <div class="header-inner header-left">
+         </div>
+         <div id="content">
+            </div>
+               <div id="side-menu"><?php
+
+                  //Menu array
+                  $title = 'Youtube';?> 
+
+                  <h1>Hello, welcome to <?php echo $title; ?></h1>
+                  <p>We're glad to have you at <?php echo $title ?></p>
+
+
+            </div>
+            <div id="main-content">
+            </div>
+
+
+         
+         
                    <img id="logo" src="/assets/youtube.svg?ver=<?php echo ('YmdHis'); ?>" />
             </div>
              <div class="header-inner header-center">
