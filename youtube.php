@@ -16,18 +16,62 @@
          </div>
          <div id="content">
             </div>
-               <div id="side-menu"><?php
+               <div id="side-menu"> <?php
 
-                  //Menu array
-                  $title = 'Youtube';?> 
+               //menu array.
+               $menu_array = [
+                   'menu' => [
+                      '/'                         => 'home',
+                      '/shorts/'.                 => 'shorts',
+                   ],
+                   'subscriptions' => [
+                    '1'                           => 'channel 1',
+                    '2'                           => 'channel 2',
+                    '3'                           => 'channel 3',
+                    '4'                           => 'channel 4',
+                    '5'                           => 'vhannel 5'
+                   ],
+                   'you'                     => [
+                    '/history'                    => 'history',
+                    '/playlists'                  => 'playlists',
+                    '/watch-later'                => 'watch later',
+                    '/liked'                      => 'liked videos',
+                    '/your-videos'                => 'your videos',
+                    '/downloads'                  => 'downloads',
 
-                  <h1>Hello, welcome to <?php echo $title; ?></h1>
-                  <p>We're glad to have you at <?php echo $title ?></p>
+                   ],
+                   'explore'               => [
+                    'shopping'                    => 'shopping',
+                    '/music'                      => 'music',
+                    '/movie-tv'                   => 'movies & TV',
+                   ],
+                   'account'.             => [
+                    '/settings'                   => 'Settings',
+                    '/report'                     => 'Report',
+                    '/help'                       => 'Help',
+                    '/feedback'                   => 'Feedback',
+                   ],
+               ]; 
+
+                 // Menu loop.
+                 foreach( $menu_array as $section  => $menu_items ) {
+
+                    // Output section.  ?>
+                    <div class="menu-section menu-section-<?php echo $section; ?>">
+                 </div><?php
+
+                 }
 
 
-            </div>
-            <div id="main-content">
-            </div>
+
+                   ?>
+              
+               </div>
+                <div id="main-content">
+               </div>
+
+
+            
 
 
          
