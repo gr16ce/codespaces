@@ -22,7 +22,7 @@
                $menu_array = [
                    'menu' => [
                       '/'                         => 'home',
-                      '/shorts/'.                 => 'shorts',
+                      '/shorts/'                  => 'shorts',
                    ],
                    'subscriptions' => [
                     '1'                           => 'channel 1',
@@ -45,7 +45,7 @@
                     '/music'                      => 'music',
                     '/movie-tv'                   => 'movies & TV',
                    ],
-                   'account'.             => [
+                   'account'              => [
                     '/settings'                   => 'Settings',
                     '/report'                     => 'Report',
                     '/help'                       => 'Help',
@@ -57,18 +57,50 @@
                  foreach( $menu_array as $section  => $menu_items ) {
 
                     // Output section.  ?>
-                    <div class="menu-section menu-section-<?php echo $section; ?>">
+                    <div class="menu-section menu-section-<?php echo $section; ?>"><?php
+                    // menu item loop.
+                    foreach( $menu_items as $url = $label ) {
+                        // output. ?>
+                        <div class="menu-item" menu-item-section-<?php echo $section; ?> menu-item-<?php echo str_replace( '/','', $url ); ?> ">
+                                  <a href="<?php echo $url"; ?>"><?php echo $label; ?></a>
+                    </div><?php
+
+                    } ?>
+
                  </div><?php
 
                  }
-
-
 
                    ?>
               
                </div>
                 <div id="main-content">
-               </div>
+                     <div id="category-filter"></div><?php
+
+                     //category array.
+                     $catefories = [
+                           'All',
+                           'Podcast',
+                           'Gaming',
+                           'Reaction Video',
+                           'Music',
+                           'mixes',
+                           'Esports',
+                           'Live'
+                     ];
+                     
+                     // Loop throught categories.
+                     foreach( $categories as $category ) {
+
+                            // Output category. ?>
+                            <a href="<?hp echo '/' . urlcode( string: strolower( string: $category ); ?>">
+                            <?php echo $category; ?>
+
+                     }
+                     ?>
+                </div>
+            </div>
+        </div>
 
 
             

@@ -4,8 +4,10 @@ body,
 #header {
     color: #fff;
     background: #0f0f0f;
+    font-family: 'arial', sans-serif;
 }
 
+/* Header */
 #header {
     display: grid;
     grid: auto-flow dense / 1fr 2fr 1fr;
@@ -159,4 +161,49 @@ button#user {
 button#user svg {
     width: 24px;
     height: 24px;
+}
+
+/* content */
+#content {
+    display: flex;
+    grid-gap: 24px;
+}
+
+#content > * {
+
+}
+
+#side-menu {
+    max-width: 240;
+}
+
+#side-menu .menu-section {
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    padding: 15px 0;
+}
+
+$side-menu .menu-section last-child {
+    border-bottom: 0;
+}
+
+#side-menu .menu-section .menu-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 10px;
+}
+
+#side-menu .menu-section .menu-item a:hover {
+    background: rgba(255,255,255, 0.2);
+}
+
+#category-filter {
+    display: flex;
+    grid-gap: 15px;
+}
+
+#category-filter a {
+    color: #fff;
+    background: rgba(255,255,255, 0.2);
 }
