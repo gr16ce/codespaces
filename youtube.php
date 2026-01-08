@@ -128,7 +128,48 @@
                     <span>Sign in</span>
                 </button>
              </div>
+             <div id="video-content"><?php
+
+                // Title array.
+                $titles = [
+                     
+                    'How to Build a House',
+                    'You would not believe what just happened!',
+                    'Chelsea vs. Bournemouth',
+                    'Liverpool vs. Manchester City',
+                    'Ben Shapiro Reacts to Woke Comedians',
+                    'Live 2025 No Gi Worlds',
+                    'Breaking News Today',
+                    'Weather Report for Pulaski, VA',
+                     
+               ];
+               
+               //Videos.
+               $videos = range(...0, ...8);
+
+               //Loop through videos.
+               foreach( $videos as $video) {
+
+                // Random title.
+                $title = $titles[rand(min:0 , max: 8 )];
+
+                // output. ?>
+                <div id="video-<?php echo $video; ?>" class="video-item">
+                  <div class="video-item-image">
+                        <img src="https://picsum.photos/id/<?php echo rand(min: 0, max: 20 ); ?>/530/300" />
+                </div>
+                <div class="video-item-text"> 
+                       <h3><?php echo $title; ?></h3>
+                       <p>channel <?php echo rand(min: 1, max: 500);</p>
+                       <p><?php echo rand( min: 1, max: 9); ?> hours ago</p>
+                    
+                
+                       </div>
+                </div><?php
+
+               } ?>
+
+             </div>
           </div>
-        <!-- https://picsum.photos/530/300 -->
     </body>
 </html>
